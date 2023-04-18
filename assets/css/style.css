@@ -765,8 +765,20 @@
   padding-top: 16px;
 }
 * body .container main .section_five .section_five_carousel {
-  display: flex;
-  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 308px;
+  margin: auto;
+}
+* body .container main .section_five .section_five_carousel .section_five_carousel_item {
+  margin: auto;
+  top: 0;
+  left: 31%;
+  transition: all 0.4s;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
 }
 * body .container main .section_five .section_five_carousel .section_five_carousel_item h4 {
   font-family: "Open Sans";
@@ -826,21 +838,23 @@
   letter-spacing: 0.005em;
   color: #000000;
 }
-* body .container main .section_five .section_five_carousel .section_five_carousel_item .section_five_carousel_item_btn {
+* body .container main .section_five .section_five_carousel .opacity {
+  opacity: 1;
+}
+* body .container main .section_five .section_five_carousel_item_btn {
   padding-top: 36px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
 }
-* body .container main .section_five .section_five_carousel .section_five_carousel_item .section_five_carousel_item_btn button {
+* body .container main .section_five .section_five_carousel_item_btn button {
   background: #f9f9fb;
   border: 1px solid #f9f9fb;
   transition: all 0.4s;
 }
-* body .container main .section_five .section_five_carousel .section_five_carousel_item .section_five_carousel_item_btn button:hover svg path {
+* body .container main .section_five .section_five_carousel_item_btn button:hover svg path {
   fill: #1c1c1e;
 }
-* body .container main .section_five .section_five_carousel .section_five_carousel_item .section_five_carousel_item_btn button:nth-of-type(2) {
+* body .container main .section_five .section_five_carousel_item_btn button:nth-of-type(2) {
   transform: rotate(180deg);
 }
 * body .container main .section_six {
@@ -998,8 +1012,8 @@
   letter-spacing: 0.005em;
   color: #cbcbcb;
   background: rgba(255, 255, 255, 0.12);
-  border-radius: 32px;
   border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 32px;
   cursor: pointer;
   padding-left: 32px;
   transition: all 0.4s;

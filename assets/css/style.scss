@@ -787,9 +787,19 @@
             padding-top: 16px;
           }
           .section_five_carousel {
-            display: flex;
-            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 308px;
+            margin: auto;
             .section_five_carousel_item {
+              margin: auto;
+              top: 0;
+              left: 31%;
+              transition: all 0.4s;
+              width: 100%;
+              position: absolute;
+              opacity: 0;
               h4 {
                 font-family: "Open Sans";
                 font-style: normal;
@@ -852,28 +862,30 @@
                   }
                 }
               }
-              .section_five_carousel_item_btn {
-                padding-top: 36px;
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                button {
-                  background: #f9f9fb;
-                  border: 1px solid #f9f9fb;
-                  transition: all 0.4s;
-                  &:hover {
-                    svg {
-                      // width: 32px;
-                      // height: 32px;
-                      path {
-                        fill: #1c1c1e;
-                      }
-                    }
-                  }
-                  &:nth-of-type(2) {
-                    transform: rotate(180deg);
+            }
+            .opacity {
+              opacity: 1;
+            }
+          }
+          .section_five_carousel_item_btn {
+            padding-top: 36px;
+            display: flex;
+            align-items: center;
+            button {
+              background: #f9f9fb;
+              border: 1px solid #f9f9fb;
+              transition: all 0.4s;
+              &:hover {
+                svg {
+                  // width: 32px;
+                  // height: 32px;
+                  path {
+                    fill: #1c1c1e;
                   }
                 }
+              }
+              &:nth-of-type(2) {
+                transform: rotate(180deg);
               }
             }
           }
@@ -1046,8 +1058,8 @@
                 letter-spacing: 0.005em;
                 color: #cbcbcb;
                 background: rgba(255, 255, 255, 0.12);
-                border-radius: 32px;
                 border: 1px solid rgba(255, 255, 255, 0.12);
+                border-radius: 32px;
                 cursor: pointer;
                 padding-left: 32px;
                 transition: all 0.4s;
